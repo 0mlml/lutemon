@@ -220,11 +220,26 @@ public class LutemonAdapter extends ListAdapter<Lutemon, LutemonAdapter.LutemonV
                 } else {
                     if (schemaId.contains("_")) {
                         String baseType = schemaId.split("_")[0].toLowerCase();
-                        String baseResourceName = "ic_lutemon_" + baseType + "_1";
-                        int baseResId = context.getResources().getIdentifier(baseResourceName, "drawable", context.getPackageName());
                         
-                        if (baseResId != 0) {
-                            imageResId = baseResId;
+                        String jpegResourceName = baseType + "_" + schemaId.split("_")[1];
+                        int jpegResId = context.getResources().getIdentifier(jpegResourceName, "drawable", context.getPackageName());
+                        
+                        if (jpegResId != 0) {
+                            imageResId = jpegResId;
+                        } else {
+                            String baseResourceName = "ic_lutemon_" + baseType + "_1";
+                            int baseResId = context.getResources().getIdentifier(baseResourceName, "drawable", context.getPackageName());
+                            
+                            if (baseResId != 0) {
+                                imageResId = baseResId;
+                            } else {
+                                String fallbackName = baseType + "_1";
+                                int fallbackResId = context.getResources().getIdentifier(fallbackName, "drawable", context.getPackageName());
+                                
+                                if (fallbackResId != 0) {
+                                    imageResId = fallbackResId;
+                                }
+                            }
                         }
                     }
                 }
@@ -273,12 +288,10 @@ public class LutemonAdapter extends ListAdapter<Lutemon, LutemonAdapter.LutemonV
 
         @Override
         public boolean areContentsTheSame(@NonNull Lutemon oldItem, @NonNull Lutemon newItem) {
-            // First compare IDs to make sure we're comparing the same Lutemon
             if (!oldItem.getId().equals(newItem.getId())) {
                 return false;
             }
             
-            // Then compare relevant properties
             return oldItem.getCurrentHealth() == newItem.getCurrentHealth() &&
                     oldItem.getAttack() == newItem.getAttack() &&
                     oldItem.getDefense() == newItem.getDefense() &&
