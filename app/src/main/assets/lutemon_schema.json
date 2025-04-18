@@ -1,0 +1,47 @@
+[
+  {
+    "id": "fire_1",
+    "name": "Fireon",
+    "color": "Red",
+    "attack": 10,
+    "defense": 5,
+    "health": 25,
+    "speed": 8
+  },
+  {
+    "id": "water_1",
+    "name": "Aquaron",
+    "color": "Blue",
+    "attack": 7,
+    "defense": 8,
+    "health": 30,
+    "speed": 6
+  },
+  {
+    "id": "grass_1",
+    "name": "Leafeon",
+    "color": "Green",
+    "attack": 8,
+    "defense": 7,
+    "health": 28,
+    "speed": 7
+  },
+  {
+    "id": "electric_1",
+    "name": "Volteon",
+    "color": "Yellow",
+    "attack": 9,
+    "defense": 4,
+    "health": 22,
+    "speed": 12
+  },
+  {
+    "id": "psychic_1",
+    "name": "Mindeon",
+    "color": "Purple",
+    "attack": 12,
+    "defense": 6,
+    "health": 20,
+    "speed": 7
+  }
+] 
