@@ -1,5 +1,8 @@
 # CT60A2412 Project
 
+## Demo video
+The demo video can be found on [Youtube](https://www.youtube.com/watch?v=M1HHkN61j5I).
+
 ## General description of our work
 We created a game app featuring various “Lutemon”, that can fight each other. Our app's home screen serves as the central hub, giving you access to three key areas: the Training Arena, the Battle Arena, and the Statistics Zone. Additionally, new Lutemon may be created at the home screen. Lutemon are stored in the Storage area, where you can manage them and summon them
 for training or battles. You can choose from five distinct Lutemon types: White, Green, Pink, Orange, and Black - each with its own unique stats and abilities.
